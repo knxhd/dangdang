@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2019/6/25 9:05
  */
 @Controller
+@RequestMapping(value = "testController")
+@SuppressWarnings("All")
 public class TestController {
 
     @Autowired
@@ -21,9 +23,9 @@ public class TestController {
 
     @RequestMapping(value = "test",method = RequestMethod.GET)
     @ResponseBody
-   public void test(){
+   public String test(){
         System.out.println("test ----");
-       testService.test();
+       return testService.test();
    }
 
 }

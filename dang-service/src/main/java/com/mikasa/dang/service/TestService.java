@@ -7,5 +7,5 @@ package com.mikasa.dang.service;
  */
 public interface TestService {
 
-    void test();
+    String test();
 }

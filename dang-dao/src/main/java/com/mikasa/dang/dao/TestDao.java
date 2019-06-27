@@ -8,5 +8,5 @@ package com.mikasa.dang.dao;
  */
 public interface TestDao {
 
-    public void test() ;
+    public String test() ;
 }

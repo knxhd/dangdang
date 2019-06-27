@@ -17,8 +17,8 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private TestDao testDao;
 
-    public void test() {
+    public String test() {
         System.out.println("server层进入====");
-        testDao.test();
+        return testDao.test();
     }
 }
