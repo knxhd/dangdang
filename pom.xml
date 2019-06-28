@@ -12,6 +12,12 @@
         <module>dang-web</module>
         <module>dang-service</module>
         <module>dang-dao</module>
+        <module>dang-entity</module>
+        <module>dang-dto</module>
+        <module>dang-common</module>
+        <module>dang-common</module>
+        <module>dang-entity</module>
+        <module>dang-entity</module>
     </modules>
 
     <dependencies>
