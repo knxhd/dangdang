@@ -1,4 +1,4 @@
-package com.mikasa.dang.ath;
+package com.mikasa.dang.entity.ath;
 
 import lombok.Data;
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mikasa.dang.dao.ath.AthUserDao">
+<resultMap id="athUser" type="com.mikasa.dang.entity.ath.AthUser">
+    <id property="userId" column="USER_ID"/>
+    <result property="jobNumber" column="JOB_NUMBER"/>
+    <result property="isEnabled" column="ISENABLED"/>
+    <result property="userName" column="USER_NAME"/>
+    <result property="passWord" column="PASSWORD"/>
+</resultMap>
+
+    <select id="getUserByJobNumber" resultMap="athUser" parameterType="string">
+         SELECT  * FROM dang_ath_user WHERE JOB_NUMBER=#{jobNumber}
+    </select>
+</mapper>

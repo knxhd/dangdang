@@ -1,8 +1,11 @@
 package com.mikasa.dang.controller.ath;
 
-import com.mikasa.dang.ath.AthUserDto;
 import com.mikasa.dang.common.DangConstants;
 import com.mikasa.dang.common.InvokeResult;
+import com.mikasa.dang.entity.ath.AthUserDto;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -29,6 +32,11 @@ public class LoginController {
     public InvokeResult<AthUserDto> login(String  userName, String passWord, String rememberMe, HttpServletRequest request){
         logger.info("{}登录中。。。。",userName);
         AthUserDto athUserDto1=new AthUserDto();
+        Subject subject = SecurityUtils.getSubject();
+        UsernamePasswordToken token=new UsernamePasswordToken();
+        token.setUsername(userName);
+        token.setPassword(passWord.toCharArray());
+        subject.login(token);
         InvokeResult<AthUserDto> invokeResult=new InvokeResult<>();
         invokeResult.setData(athUserDto1);
         invokeResult.setStatus(DangConstants.SUCCESS_STATUS);

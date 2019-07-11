@@ -1,6 +1,6 @@
 package com.mikasa.dang.controller;
 
-import com.mikasa.dang.ath.AthUserDto;
+import com.mikasa.dang.entity.ath.AthUserDto;
 import com.mikasa.dang.common.DangConstants;
 import com.mikasa.dang.common.InvokeResult;
 import com.mikasa.dang.service.TestService;
